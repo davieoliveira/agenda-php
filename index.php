@@ -28,7 +28,7 @@ include("db/conexao.php");
                 include("paginas/home/home.php");
                 break;
             case 'contatos':
-                include("paginas/contatos/contatos.php");
+                include("paginas/contatos/ver-contatos.php");
                 break;
             case 'cadastro-contato':
                 include("paginas/contatos/cadastro-contato.php");

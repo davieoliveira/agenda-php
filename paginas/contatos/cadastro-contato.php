@@ -16,6 +16,10 @@
             <input type="text" name="telefoneContato">
         </div>
         <div>
+            <label for="enderecoContato"> Endereço </label>
+            <input type="text" name="enderecoContato">
+        </div>
+        <div>
             <label for="dataNascContato"> Data Nascimento </label>
             <input type="date" name="dataNascContato">
         </div>

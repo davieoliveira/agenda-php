@@ -11,13 +11,28 @@
             <th> Nome </th>
             <th> Email </th>
             <th> Telefone </th>
+            <th> Endereço </th>
             <th> Sexo </th>
             <th> Data Nascimento </th>
         </tr>
     </thead>
     <tbody>
     <?php
-    $sql = "SELECT * FROM tbcontatos";
+    $sql = "SELECT
+            id,
+            upper(nomeContato) AS nomeContato,
+            lower(emailContato) AS emailContato,
+            telefoneContato,
+            upper(enderecoContato) AS enderecoContato,
+            CASE 
+                WHEN sexoContato = 'F' THEN 'FEMININO'
+                WHEN sexoContato = 'M' THEN 'MASCULINO'
+            ELSE
+                'NÃO ESPECIFICADO'
+            END AS sexoContato,
+            DATE_FORMAT(dataNascContato, '%d/%m/%Y') AS dataNascContato
+            FROM tbcontatos";
+
     $rs = mysqli_query($conexao, $sql) or die("Erro ao executar consulta!" . mysqli_error($conexao));
     while($dados = mysqli_fetch_assoc($rs)){
     ?>        
@@ -26,8 +41,9 @@
             <td> <?=$dados["nomeContato"] ?>      </td>
             <td> <?=$dados["emailContato"] ?>     </td>
             <td> <?=$dados["telefoneContato"] ?>  </td>
+            <td> <?=$dados["enderecoContato"] ?>  </td>
             <td> <?=$dados["sexoContato"] ?>      </td>
-            <td> <?=$dados["dataNascContato"] ?>     </td>
+            <td> <?=$dados["dataNascContato"] ?>  </td>
         </tr>
     <?php
     }
