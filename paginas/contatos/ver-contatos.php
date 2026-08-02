@@ -14,12 +14,14 @@
             <th> Endereço </th>
             <th> Sexo </th>
             <th> Data Nascimento </th>
+            <th> Edição </th>
+            <th> Excluir </th>
         </tr>
     </thead>
     <tbody>
     <?php
     $sql = "SELECT
-            id,
+            idContato,
             upper(nomeContato) AS nomeContato,
             lower(emailContato) AS emailContato,
             telefoneContato,
@@ -37,13 +39,15 @@
     while($dados = mysqli_fetch_assoc($rs)){
     ?>        
         <tr>
-            <td> <?=$dados["id"] ?>               </td>
+            <td> <?=$dados["idContato"] ?>        </td>
             <td> <?=$dados["nomeContato"] ?>      </td>
             <td> <?=$dados["emailContato"] ?>     </td>
             <td> <?=$dados["telefoneContato"] ?>  </td>
             <td> <?=$dados["enderecoContato"] ?>  </td>
             <td> <?=$dados["sexoContato"] ?>      </td>
             <td> <?=$dados["dataNascContato"] ?>  </td>
+            <td> <a href="index.php?menuop=editar-contato&idContato=<?=$dados["idContato"] ?>"> Editar </a> </td>
+            <td> <a href="index.php?menuop=excluir-contato&idContato=<?=$dados["idContato"] ?>"> Excluir </a> </td>
         </tr>
     <?php
     }
