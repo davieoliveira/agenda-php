@@ -30,6 +30,12 @@ include("db/conexao.php");
             case 'contatos':
                 include("paginas/contatos/contatos.php");
                 break;
+            case 'cadastro-contato':
+                include("paginas/contatos/cadastro-contato.php");
+                break;
+            case 'inserir-contato':
+                include("paginas/contatos/inserir-contato.php");
+                break;
             case 'tarefas':
                 include("paginas/tarefas/tarefas.php");
                 break;

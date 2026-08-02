@@ -27,7 +27,7 @@
             <td> <?=$dados["emailContato"] ?>     </td>
             <td> <?=$dados["telefoneContato"] ?>  </td>
             <td> <?=$dados["sexoContato"] ?>      </td>
-            <td> <?=$dados["dataNascData"] ?>     </td>
+            <td> <?=$dados["dataNascContato"] ?>     </td>
         </tr>
     <?php
     }

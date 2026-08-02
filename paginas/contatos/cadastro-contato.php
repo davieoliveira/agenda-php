@@ -2,27 +2,27 @@
     <h3>Cadastro de Contato</h3>
 </header>
 <div>
-    <form action="" method="post">
+    <form action="index.php?menuop=inserir-contato" method="post">
         <div>
             <label for="nomeContato"> Nome</label>
             <input type="text" name="nomeContato">
         </div>
         <div>
-            <label for="emailContato"> Nome</label>
+            <label for="emailContato"> Email </label>
             <input type="email" name="emailContato">
         </div>
         <div>
-            <label for="telefoneContato"> Nome</label>
+            <label for="telefoneContato"> Telefone </label>
             <input type="text" name="telefoneContato">
         </div>
         <div>
-            <label for="dataNascContato"> Nome</label>
-            <input type="text" name="dataNascContato">
+            <label for="dataNascContato"> Data Nascimento </label>
+            <input type="date" name="dataNascContato">
         </div>
         <div>
-            <label for="sexoContato"> Nome</label>
+            <label for="sexoContato"> Gênero </label>
             <input type="text" name="sexoContato">
         </div>
-        <input type="submit" value="Adicionar" name="btnAdicionar"
+        <input type="submit" value="Adicionar" name="btnAdicionar">
     </form>
 </div>
