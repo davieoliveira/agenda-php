@@ -1,0 +1,18 @@
+body{
+    background-color: rgb(29, 29, 29);
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+/* Cor de fundo e texto dos botões normais */
+.pagination .page-link {
+    background-color: #383838;
+    color: #ffffff;
+    border-color: #dee2e6;
+}
+
+/* Cor do botão quando passa o mouse por cima (Hover) */
+.pagination .page-link:hover {
+    background-color: #e2e6ea;
+    color: #000;
+}
