@@ -5,8 +5,8 @@
     </form>
 
     <div class="position-absolute end-0">
-        <a class="btn btn-success" href="index.php?menuop=cadastro-contato">
-            <i class="bi bi-plus-lg"></i> Novo Contato
+        <a class="btn btn-primary" href="index.php?menuop=cadastro-contato">
+            <i class="bi bi-person-fill-add"></i> Novo Contato
         </a>
     </div>
 </div>
@@ -65,8 +65,8 @@
             <td> <?=$dados["enderecoContato"] ?>  </td>
             <td> <?=$dados["sexoContato"] ?>      </td>
             <td> <?=$dados["dataNascContato"] ?>  </td>
-            <td> <a class="btn btn-danger" href="index.php?menuop=editar-contato&idContato=<?=$dados["idContato"] ?>"> Editar </a> </td>
-            <td> <a class="btn btn-success" href="index.php?menuop=excluir-contato&idContato=<?=$dados["idContato"] ?>"> Excluir </a> </td>
+            <td> <a class="btn btn-warning" href="index.php?menuop=editar-contato&idContato=<?=$dados["idContato"] ?>"> <i class="bi bi-pencil-square"></i> </a> </td>
+            <td> <a class="btn btn-danger" href="index.php?menuop=excluir-contato&idContato=<?=$dados["idContato"] ?>"> <i class="bi bi-trash3"> </i> </a> </td>
         </tr>
     <?php
     }
