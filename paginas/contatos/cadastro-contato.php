@@ -2,26 +2,35 @@
     <h3>Cadastro de Contato</h3>
 </header>
 <div>
-    <form action="index.php?menuop=inserir-contato" method="post">
+    <form class="needs-validation" action="index.php?menuop=inserir-contato" method="post" novalidate>
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-6"> 
                     <!-- Nome de Contato -->
                     <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1"> <i class="bi bi-person"></i> </span>
-                        <input type="text" class="form-control" placeholder="Nome" aria-label="Username" name="nomeContato">
+                        <input type="text" class="form-control" placeholder="Nome" aria-label="Username" name="nomeContato" required>
+                        <div class="invalid-tooltip">
+                             Campo obrigatório!
+                        </div>
                     </div>
                     
                     <!-- Email do Contato -->
                     <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon2"> <i class="bi bi-envelope"></i> </span>
-                        <input type="email" class="form-control" placeholder="E-mail" aria-label="Email" name="emailContato">
+                        <input type="email" class="form-control" placeholder="E-mail" aria-label="Email" name="emailContato" required>
+                         <div class="invalid-tooltip">
+                             Campo obrigatório!
+                        </div>
                     </div>
 
                      <!-- Telefone do Contato -->
                     <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon2"> <i class="bi bi-telephone-fill"></i> </span>
-                        <input type="text" class="form-control" placeholder="Telefone" aria-label="Email" name="telefoneContato">
+                        <input type="text" class="form-control" placeholder="Telefone" aria-label="Email" name="telefoneContato" required>
+                         <div class="invalid-tooltip">
+                             Campo obrigatório!
+                        </div>
                     </div>
                     
                      <!-- Endereço do Contato -->
