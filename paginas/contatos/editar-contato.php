@@ -9,11 +9,22 @@ $dados = mysqli_fetch_assoc($rs);
     <h3> Editar Contato </h3>
 </header>
 <div>
+    <?php
+        $nomeFoto = $dados["nomeFotoContato"];
+        
+        if($dados["nomeFotoContato"] == ""|| !file_exists('./paginas/contatos/fotos-contatos/'. $dados["nomeFotoContato"])){
+            $nomeFoto = "semFoto.jpg";
+        } else {
+            $nomeFoto = $dados["nomeFotoContato"];
+        }
+    ?>
+    <img src="./paginas/contatos/fotos-contatos/<?=$nomeFoto?>" alt="Foto do Contato" width="300">
+</div>
+<div>
     <form action="index.php?menuop=atualizar-contato" method="post">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-6">
-
                     <!-- ID do Contato -->
                     <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon0"> <i class="bi bi-key-fill"></i> </span>
