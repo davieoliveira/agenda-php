@@ -50,7 +50,7 @@
     ?>        
         <tr>
             <td> 
-                <a class="btn btn-secondary btn-sm" href="#">    
+                <a class="btn btn-secondary btn-sm" href="index.php?menuop=concluir-tarefa&idTarefa=<?=$dados["idTarefa"]?>">    
                     <?php
                         if($dados['statusTarefa'] == 0){
                             echo '<i class="bi bi-square"></i>';
