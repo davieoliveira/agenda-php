@@ -1,3 +1,6 @@
+<?php 
+    $txt_pesquisa = (isset($_POST["txt_pesquisa"]))?$_POST["txt_pesquisa"]:"";
+?>
 <h3>Página de Tarefas</h3>
 <div class="d-flex align-items-center justify-content-center position-relative my-4">
     <form class="input-group" style="max-width: 350px;" action="index.php?menuop=tarefas" method="post"> 
@@ -26,8 +29,6 @@
     </thead>
     <tbody>
     <?php
-
-    $txt_pesquisa = (isset($_POST["txt_pesquisa"]))?$_POST["txt_pesquisa"]:"";
 
     $sql = "SELECT
             idTarefa,

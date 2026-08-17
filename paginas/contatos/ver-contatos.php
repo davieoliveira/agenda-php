@@ -1,6 +1,10 @@
+<?php 
+    $txt_pesquisa = (isset($_POST["txt_pesquisa"]))?$_POST["txt_pesquisa"]:"";
+?>
+
 <div class="d-flex align-items-center justify-content-center position-relative my-4">
     <form class="input-group" style="max-width: 350px;" action="index.php?menuop=contatos" method="post"> 
-        <input class="form-control me-2" type="text" name="txt_pesquisa" placeholder="Buscar contato...">
+        <input class="form-control me-2" type="text" name="txt_pesquisa" placeholder="Buscar contato..." value="<?=$txt_pesquisa?>">
         <input class="btn btn-outline-secondary" type="submit" value="Pesquisar"> 
     </form>
 
@@ -32,8 +36,6 @@
     $pagina = (isset($_GET['pagina']))?(int)$_GET['pagina']:1;
 
     $inicio = ($quantidade * $pagina) - $quantidade;
-
-    $txt_pesquisa = (isset($_POST["txt_pesquisa"]))?$_POST["txt_pesquisa"]:"";
 
     $sql = "SELECT  
             idContato,
