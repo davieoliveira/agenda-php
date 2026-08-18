@@ -54,7 +54,7 @@ include("db/conexao.php");
             case 'contatos':
                 include("paginas/contatos/ver-contatos.php");
                 break;
-            case 'cadastro-contato':
+            case 'cadastrar-contato':
                 include("paginas/contatos/cadastro-contato.php");
                 break;
             case 'inserir-contato':
@@ -74,6 +74,12 @@ include("db/conexao.php");
                 break;
             case 'concluir-tarefa':
                 include("paginas/tarefas/concluir-tarefa.php");
+                break;
+            case 'cadastrar-tarefa':
+                include("paginas/tarefas/cadastrar-tarefa.php");
+                break;
+            case 'inserir-tarefa';
+                include("paginas/tarefas/inserir-tarefa.php");
                 break;
             default:
                 include("paginas/eventos/eventos.php");
