@@ -55,7 +55,7 @@ include("db/conexao.php");
                 include("paginas/contatos/ver-contatos.php");
                 break;
             case 'cadastrar-contato':
-                include("paginas/contatos/cadastro-contato.php");
+                include("paginas/contatos/cadastrar-contato.php");
                 break;
             case 'inserir-contato':
                 include("paginas/contatos/inserir-contato.php");

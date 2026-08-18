@@ -9,7 +9,7 @@
     </form>
 
     <div class="position-absolute end-0">
-        <a class="btn btn-primary" href="index.php?menuop=cadastro-contato">
+        <a class="btn btn-primary" href="index.php?menuop=cadastrar-contato">
             <i class="bi bi-person-fill-add"></i> Novo Contato
         </a>
     </div>
