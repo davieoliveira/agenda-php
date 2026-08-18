@@ -84,6 +84,12 @@ include("db/conexao.php");
             case 'excluir-tarefa';
                 include("paginas/tarefas/excluir-tarefa.php");
                 break;
+            case 'editar-tarefa';
+                include("paginas/tarefas/editar-tarefa.php");
+                break;
+            case 'atualizar-tarefa';
+                include("paginas/tarefas/atualizar-tarefa.php");
+                break;
             default:
                 include("paginas/eventos/eventos.php");
                 #code...
